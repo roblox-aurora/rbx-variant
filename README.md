@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://i.imgur.com/N4HT9Gj.png" width="200"/>
     <h1>Variant (<i>for Roblox</i>) [WIP]</h1>
-    <p>This is a roblox typescript variant (heh, pun) of <a href="https://paarthenon.github.io/variant/docs/intro">Variant</a>. See the <a href="https://paarthenon.github.io/variant/docs/intro">Variant documentation</a> on how to use Variant.</p>
+    <p>This is a roblox typescript variant (heh, pun) of <a href="https://github.com/paarthenon/variant">Variant</a>. See the <a href="https://paarthenon.github.io/variant/docs/intro">Variant documentation</a> on how to use Variant.</p>
 </div>
 
 Over time features may be added from the original library, and roblox-specific features may be added.
