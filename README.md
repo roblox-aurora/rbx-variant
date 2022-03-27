@@ -31,7 +31,7 @@ Functions
 - [ ] `match`
 - [ ] `matchElse`
 - [ ] `narrow`
-- [ ] `outputTypes`
+- [x] `outputTypes`
 - [ ] `partialLookup`
 - [ ] `partialMatch`
 
@@ -40,7 +40,7 @@ Variant Creation
 - [x] `fields`
 - [ ] `payload`
 - [x] `variantFactory`
-- [ ] `variantList`
+- [x] `variantList`
 - [x] `variantModule`
 
 Types
