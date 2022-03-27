@@ -24,7 +24,7 @@ const aCat = Animal.cat({name: "Whiskers", furnitureDamaged: true}); // will res
 ## Supports
 Functions
 - [ ] `cast`
-- [ ] `isOfVariant`
+- [x] `isOfVariant`
 - [ ] `keys`
 - [ ] `keymap`
 - [ ] `lookup`
@@ -46,13 +46,13 @@ Variant Creation
 Types
 - [ ] `Flags<T>`
 - [ ] `Handler<T>`
-- [ ] `KeysOf<T>`
+- [x] `KeysOf<T>`
 - [ ] `Lookup<T, U>`
 - [ ] `Matrix<T>`
 - [ ] `TypeNames<T>`
 - [x] `VariantCreator<T, F, K?>`
-- [ ] `VariantModule<K>`
-- [ ] `VariantOf<T>`
+- [x] `VariantModule<K>`
+- [x] `VariantOf<T>`
 - [ ] `TypeExt<K, T>`
 - [ ] `WithProperty<K, T>`
 

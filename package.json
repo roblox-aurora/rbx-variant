@@ -1,12 +1,15 @@
 {
   "name": "@rbxts/variant",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test:setup": "cd tests && npm install && npm run init && npm run build",
+    "test:run": "run-in-roblox --place ./tests/tests.rbxl --script ./tests/out/main.server.lua",
+    "test": "npm run test:setup && npm run test:run"
   },
   "keywords": [],
   "author": "Vorlias",
@@ -31,6 +34,8 @@
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^1.2.9-types.0",
+    "@rbxts/services": "^1.2.0",
+    "@rbxts/testez": "^0.3.1-ts.7",
     "@rbxts/types": "^1.0.571",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",

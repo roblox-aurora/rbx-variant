@@ -2,3 +2,10 @@
 /out
 /include
 *.tsbuildinfo
+/tests/node_modules
+/tests/include
+/tests/out
+*.rbxl
+/tests/.yalc
+/tests/yalc.lock
+*.tgz
