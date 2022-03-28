@@ -8,7 +8,7 @@
 > [A variant type](https://reasonml.github.io/docs/en/variant) is like an enum but each case can hold some extra data.
 
 ```bash
-npm i --save-dev @rbxts/variant
+npm i --save @rbxts/variant
 ```
 
 As per the original repo description - Variant aims to bring the experience of [variant types](https://dev.realworldocaml.org/variants.html) to TypeScript. Variant types, a.k.a. [discriminated unions](https://basarat.gitbook.io/typescript/type-system/discriminated-unions) in the TypeScript world, are an excellent tool for describing and handling flexible domain models and tiny DSLs. However, because [*"TypeScript instead builds on JavaScript patterns as they exist today"*](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) using them as-is can result in tedious and fragile code. This project addresses that by providing well-typed, fluent, and expressive tools to safely do away with the boilerplate.
