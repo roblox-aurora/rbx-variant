@@ -1,8 +1,33 @@
-export { variantFactory } from "./variantFactory";
-import variantModule from "./variants";
-export { variantList } from "./variants/variantList";
-export { isOfVariant, outputTypes } from "./variants/isOfVariant";
-export { fields } from "./fields";
-export { variant, default as variantModule } from "./variants";
-export { VariantCreator, VariantModule, VariantOf, KeysOf } from "./types";
+import { fields } from "./fields";
+import { Lookup, lookup, partialLookup } from "./lookup";
+import { Handler, match } from "./match";
+import { payload } from "./payload";
+import { Flags, KeysOf, Matrix, TypeExt, TypeNames, VariantCreator, VariantModule, VariantOf } from "./types";
+import { variantFactory } from "./variantFactory";
+import variantModule, { variant } from "./variants";
+import { cast } from "./variants/cast";
+import { isOfVariant, outputTypes } from "./variants/isOfVariant";
+import { keymap } from "./variants/keymap";
+import { keys } from "./variants/keys";
+import { narrow } from "./variants/narrow";
+
+export type { Handler, KeysOf, TypeNames, VariantCreator, VariantModule, VariantOf, TypeExt, Lookup, Matrix, Flags };
+
+export {
+	fields,
+	lookup,
+	partialLookup,
+	match,
+	variantFactory,
+	variantModule,
+	variant,
+	cast,
+	isOfVariant,
+	outputTypes,
+	narrow,
+	keys,
+	keymap,
+	payload,
+};
+
 export default variantModule;

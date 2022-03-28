@@ -1,4 +1,4 @@
-import { variant } from "..";
+import { variant } from "./index";
 import { VariantCreator } from "../types";
 
 /**

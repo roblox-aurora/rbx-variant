@@ -1,7 +1,7 @@
 {
   "name": "@rbxts/variant",
-  "version": "0.2.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Variant types in Roblox TypeScript",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
@@ -11,7 +11,7 @@
     "test:run": "run-in-roblox --place ./tests/tests.rbxl --script ./tests/out/main.server.lua",
     "test": "npm run test:setup && npm run test:run"
   },
-  "keywords": [],
+  "keywords": ["variants", "roblox", "typescript"],
   "author": "Vorlias",
   "contributors": [
     {

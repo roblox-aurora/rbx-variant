@@ -5,6 +5,34 @@ export type Identity<T> = T extends object
 	: T;
 
 /**
+ * Alias of `Property<K extends string, T>`
+ */
+export type TypeExt<K extends string, T> = Property<K, T>;
+
+/**
+ * Same as handler but needs to handle literals instead of variants. Used by matchLiteral.
+ */
+export type UnionHandler<T extends string> = {
+	[P in T]: (variant: P) => any;
+};
+
+export type Matrix<T extends VariantModule<K>, K extends string = "type"> = {
+	[P in KeysOf<T, K>]: ExtractOfUnion<SumType<T, K>, P, K>;
+};
+
+/**
+ * Splay a list of variant instances into an object.
+ */
+export type Flags<T extends VariantModule> = Partial<Matrix<T>>;
+
+/**
+ * From a given union type, extract the the variant object's type.
+ */
+export type VariantsOfUnion<T extends Property<K, string>, K extends string = "type"> = {
+	[P in T[K]]: ExtractOfUnion<T, P, K>;
+};
+
+/**
  * Given a union of types all of which meet the contract {[K]: string}
  * extract the type that is specifically {[K]: TType}
  */
@@ -38,6 +66,11 @@ export type KeyMap<T extends VariantModule<K>, K extends string = "type"> = {
 export type VariantModule<K extends string = "type"> = {
 	[name: string]: VariantCreator<string, (...args: any[]) => any, K>;
 };
+
+/**
+ * Get the valid options for a variant type's names, plus `undefined`.
+ */
+export type TypeNames<T extends VariantModule<K>, K extends string = "type"> = KeysOf<T, K> | undefined;
 
 type CleanResult<T, U> = T extends undefined ? U : T extends Callback ? T : T extends object ? U : T;
 
