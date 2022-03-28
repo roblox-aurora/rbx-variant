@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/variant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Variant types in Roblox TypeScript",
   "main": "out/init.lua",
   "scripts": {

@@ -10,6 +10,7 @@ import { isOfVariant, outputTypes } from "./variants/isOfVariant";
 import { keymap } from "./variants/keymap";
 import { keys } from "./variants/keys";
 import { narrow } from "./variants/narrow";
+import { variantList } from "./variants/variantList";
 
 export type { Handler, KeysOf, TypeNames, VariantCreator, VariantModule, VariantOf, TypeExt, Lookup, Matrix, Flags };
 
@@ -28,6 +29,7 @@ export {
 	keys,
 	keymap,
 	payload,
+	variantList,
 };
 
 export default variantModule;
