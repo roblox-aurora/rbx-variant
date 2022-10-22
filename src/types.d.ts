@@ -49,11 +49,16 @@ export type VariantOf<
 	T extends VariantModule<K>,
 	TType = undefined,
 	K extends string = "type",
-> = TType extends undefined
+> = (TType extends undefined
 	? SumType<T, K>
 	: TType extends KeysOf<T, K>
 	? ExtractOfUnion<SumType<T, K>, TType, K>
-	: SumType<T, K>;
+	: SumType<T, K>) & {
+	/**
+	 * @hidden
+	 * @deprecated
+	 */ readonly __nominal_VariantType?: unique symbol;
+};
 
 export type KeyMap<T extends VariantModule<K>, K extends string = "type"> = {
 	[Label in keyof T]: T[Label] extends VariantCreator<infer TypeStr, Callback, K> ? TypeStr : never;
